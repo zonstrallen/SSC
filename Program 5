@@ -1,3 +1,7 @@
+STEP 1:
+gedit pgm5.c
+
+STEP 2:
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
@@ -43,19 +47,6 @@ fclose(fp1); fclose(fp2);
 //getch();
 }
 
-
-
-input.txt
-T1 -B = ?
-T2 C + D T3 T1 * T2
-A T3 = ?
-
-output.txt
-MOV R0,-B MOV T1,R0
-MOV R0,C ADD R0,D MOV
-T2,R0
-MOV R0,T1
-MUL R0,T2
-MOV T3,R0
-MOV R0,T3
-MOV A,R
+STEP 3:
+cc pgm5.c
+./a.out
