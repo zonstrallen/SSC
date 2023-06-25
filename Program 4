@@ -1,3 +1,7 @@
+STEP 1:
+gedit pgm4.c
+
+STEP 2:
 #include<stdio.h>
 //#include<conio.h>
 #include<string.h>
@@ -66,3 +70,7 @@ printf("\n$%s\t%s$\t%s", stk, a, ac);
 i = i - 2;
 }
 }
+
+STEP 3:
+cc pgm4.c
+./a.out
