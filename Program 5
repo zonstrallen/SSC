@@ -48,5 +48,14 @@ fclose(fp1); fclose(fp2);
 }
 
 STEP 3:
+Filw--->New--->Copy and paste ans save as 'input.txt'
+T1 -B = ?
+T2 C + D T3 T1 * T2
+A T3 = ?
+
+
+
+
+STEP 3:
 cc pgm5.c
 ./a.out
