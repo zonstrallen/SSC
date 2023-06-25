@@ -1,3 +1,7 @@
+STEP 1:
+gedit pgm9.c
+
+STEP 2:
 #include<stdio.h>
 #include<stdlib.h>
 void FIFO(char [ ],char [ ],int,int);
@@ -140,3 +144,7 @@ printf("\tNo page fault");
 flag=0;
 }
 }
+
+STEP 3:
+cc pgm9.c
+./a.out
