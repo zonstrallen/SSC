@@ -1,0 +1,52 @@
+------------------------------------------Program 2------------------------------------------
+STEP 1:
+open terminal
+
+STEP 2:
+gedit pgm2.l
+
+STEP 3:
+%{
+#include "y.tab.h"
+%}
+%%
+a {return A;}
+b {return B;}
+[\n] return '\n';
+%%
+
+STEP 4:
+gedit pgm2.y
+
+STEP 5:
+%{
+#include<stdio.h>
+#include<stdlib.h>
+%}
+%token A B
+%%
+input:s'\n' {printf("Successful Grammar\n");exit(0);}
+s:A s1 B| B
+s1: ; | A s1
+%%
+main()
+{
+printf("Enter a string\n");
+yyparse();
+}
+int yyerror()
+{
+printf("Error \n");
+exit(0);
+}
+
+STEP 6:
+lex pgm2.l
+yacc pgm2.y
+
+STEP 7:
+cc lex.yy.c -ll
+./a.out
+
+SUCCESSFULL GRAMMAR: ab
+UNSUCCESSFULL GRAMMAR: bbb
