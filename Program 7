@@ -1,3 +1,7 @@
+STEP 1:
+gedit pgm7.c
+
+STEP 2:
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -186,3 +190,7 @@ void srtf(int n) {
     printf("\n\n");
     printf("tavg=%f\t wavg=%f\n", tavg, wavg);
 }
+
+STEP 3:
+cc pgm7.c
+./a.out
