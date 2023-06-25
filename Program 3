@@ -1,3 +1,7 @@
+STEP 1:
+gedit pgm3.c
+
+STEP 2:
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -139,3 +143,7 @@ else
 printf("Invalid String - Rejected\n");
 }
 }
+
+STEP 3:
+cc pgm3.c
+./a.out
