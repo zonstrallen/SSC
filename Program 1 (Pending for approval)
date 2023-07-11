@@ -56,7 +56,6 @@ STEP 2:
   gedit pgm1b.l
 
 STEP 3:
-  Paste Lex part:
 %{
 #include "y.tab.h"
 extern yylval;
