@@ -59,3 +59,4 @@ A T3 = ?
 STEP 3:
 cc pgm5.c
 ./a.out
+cat output.txt
