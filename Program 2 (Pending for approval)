@@ -45,7 +45,7 @@ lex pgm2.l
 yacc pgm2.y
 
 STEP 7:
-cc lex.yy.c -ll
+cc lex.yy.c y.tab.c -ll
 ./a.out
 
 SUCCESSFULL GRAMMAR: ab
