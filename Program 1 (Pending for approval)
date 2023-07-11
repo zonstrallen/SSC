@@ -39,7 +39,7 @@ STEP 4:
 lex pgm1a.l
 
 STEP 5:
-cc lex.yy.c –ll
+cc lex.yy.c -ll
 
 STEP 6:
 ./a.out 
