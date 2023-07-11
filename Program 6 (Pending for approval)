@@ -65,8 +65,7 @@ extern int yylval;
 [+|-|*|/|!=|<|>] {printf("operator is %s\n", yytext); return OP;}
 [0-9]+ { yylval= atoi(yytext); printf("number is %d\n",yylval);
 return DIGIT;}
-int|char|bool|float|void|for|do|while|if|else|return|void
-printf("keyword is %s\n", yytext);return KEY;}
+int|char|bool|float|void|for|do|while|if|else|return|void {printf("keyword is %s\n", yytext);return KEY;}
 [a-zA-Z0-9]+ {printf("identifier is %s\n", yytext);return ID;}
 . ;
 %%
@@ -84,8 +83,7 @@ int id=0, dig=0, key=0, op=0;
 %}
 %token DIGIT ID KEY OP
 %%
-input:
-DIGIT input { dig++;}
+input:DIGIT input { dig++;}
 | ID input { id++;}
 | KEY input { key++;}
 | OP input { op++;}
@@ -112,8 +110,7 @@ do
 {
 yyparse();
 } while(!feof(yyin));
-printf("numbers=%d\n Keywords=%d\n Identifiers=%d\n
-Operators=%d\n",dig,key,id,op);
+printf("numbers=%d\n Keywords=%d\n Identifiers=%d\n Operators=%d\n",dig,key,id,op);
 }
 void yyerror()
 {
@@ -121,24 +118,20 @@ printf("Parse error! Message:");
 exit(-1);
 }
 
-
 STEP 5:
 gedit ss.input.c
 
+STEP 6:
 #include<stdio.h>
 int main()
-int a, b, c;
 {
-c=4+4;
-printf("c=", c);
+int a=1,b=3,c;
+printf(c=a+b);
 }
-return 0;
 
 
-STEP 6:
-rm -rf lex.yy.c y.tab.c
+STEP 7:
 lex pgm6b.l
 yacc -d pgm6b.y
 cc lex.yy.c y.tab.c -ll
-ls
 ./a.out
