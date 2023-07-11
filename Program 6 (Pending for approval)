@@ -121,7 +121,6 @@ exit(-1);
 STEP 5:
 File--->New---->paste and save as 'ss_input.c'
 
-STEP 6:
 #include<stdio.h>
 int main()
 {
