@@ -42,7 +42,7 @@ exit(0);
 
 STEP 6:
 lex pgm2.l
-yacc pgm2.y
+yacc -d pgm2.y
 
 STEP 7:
 cc lex.yy.c y.tab.c -ll
