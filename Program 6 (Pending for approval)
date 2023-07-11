@@ -9,9 +9,10 @@ int sl=0;
 int ml=0;
 %}
 %%
-“/*”[a-zA-Z0-9’’\t\n]+”*/”ml++;”//”.*s1++;
+"/*"[a-zA-Z0-9' '\t\n]+"*/" ml++;
+"//".* sl++;
 %%
-main()
+int main()
 {
 yyin=fopen("f1.c","r");
 yyout=fopen("f2.c","w");
@@ -19,32 +20,31 @@ yylex();
 fclose(yyin);
 fclose(yyout);
 printf("\n Number of single line comments are = %d\n",sl);
-printf("\n Number of multiline comments are =%d\n",ml);
-}
+printf("\nNumber of multiline comments are =%d\n",ml); }
 
 STEP 3:
 File--->New--->Copy code and then save the file f1.c
 #include<stdio.h>
-#include<stdlib.h>
 int main()
 {
-//Teachers don't just teach—they prepare us for the road ahead.
-//One child, one teacher, one book & one pen can change the world.
-Teachers are our second parents.
-Teachers are like God to us.
+// hello
+//bye
+//goodbye
+//see you soon
+
+/*hello
+bye
+goodbye
+see you soon*/
+/*hello
+bye
+goodbye
+see you soon*/
+printf("hello world");
 }
+
 
 STEP 4:
-File--->New--->Copy code and then save the file f2.c
-#include<stdio.h>
-#include<stdlib.h>
-int main()
-{
-
-
-}
-
-STEP 5:
 lex pgm6a.l
 cc lex.yy.c -ll
 ./a.out
