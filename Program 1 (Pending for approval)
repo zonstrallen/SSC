@@ -113,7 +113,7 @@ STEP 8:
   yacc -d pgm1b.y
 
 STEP 9:
-  cc lex.yy.c -ll
+  cc lex.yy.c y.tab.c -ll
   ./a.out
   CTRL+D
 
