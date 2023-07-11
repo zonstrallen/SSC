@@ -76,7 +76,6 @@ STEP 5:
   gedit pgm1b.y
 
 STEP 6:
-  Paste Yacc Part:
 %{
 #include<stdio.h>
 #include<stdlib.h>
